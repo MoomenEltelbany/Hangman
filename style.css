@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Tahoma, Arial;
+}
+
+.container {
+    width: 1000px;
+    margin: 20px auto;
+}
+
+.game-info {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+hr {
+    border: 1px solid #222;
+}
+
+.row {
+    padding-top: 20px;
+    display: flex;
+}
+
+.hangman-draw {
+    flex: 1;
+    background-color: #f8f8f8;
+    height: 324px;
+    width: 60px;
+}
+
+.letters {
+    flex: 1;
+    text-align: center;
+}
+
+.letters span {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+    font-size: 24px;
+    text-transform: capitalize;
+    margin: 0 10px 10px 0;
+    background-color: #00bcd4;
+    color: white;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.letters span:hover {
+    background-color: #019baf;
+}
