@@ -71,24 +71,77 @@ hr {
     left: 126px;
 }
 
-.hangman-draw .draw .the-rope {
+.hangman-draw .draw .the-rope,
+.hangman-draw .draw .head {
     position: absolute;
+    border-radius: 50%;
+}
+
+.hangman-draw .draw .the-rope {
     width: 70px;
     height: 70px;
-    border-radius: 50%;
     border: 4px dashed #222;
-    left: 95px;
+    left: 94px;
     top: 46px;
 }
 
 .hangman-draw .draw .head {
-    position: absolute;
     width: 50px;
     height: 50px;
-    border-radius: 50%;
     border: 4px solid #222;
-    left: 105px;
+    left: 104px;
     top: 56px;
+}
+
+.hangman-draw .draw .body {
+    position: absolute;
+    height: 100px;
+    width: 4px;
+    left: 126px;
+    top: 102px;
+    background-color: #222;
+}
+
+.hangman-draw .draw .hands::before,
+.hangman-draw .draw .hands::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 4px;
+    background-color: #222;
+}
+
+.hangman-draw .draw .hands::before {
+    top: 135px;
+    left: 126px;
+    transform: rotate(-30deg);
+}
+
+.hangman-draw .draw .hands::after {
+    top: 136px;
+    left: 84px;
+    transform: rotate(30deg);
+}
+
+.hangman-draw .draw .legs::before,
+.hangman-draw .draw .legs::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 4px;
+    background-color: #222;
+}
+
+.hangman-draw .draw .legs::before {
+    top: 210px;
+    left: 125px;
+    transform: rotate(30deg);
+}
+
+.hangman-draw .draw .legs::after {
+    top: 209px;
+    left: 83px;
+    transform: rotate(-30deg);
 }
 
 .letters {
