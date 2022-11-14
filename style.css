@@ -29,6 +29,7 @@ hr {
 }
 
 .hangman-draw {
+    padding: 20px;
     flex: 1;
     background-color: #f8f8f8;
     height: 324px;
@@ -41,6 +42,53 @@ hr {
     height: 280px;
     border-bottom: 4px solid #222;
     margin: auto;
+}
+
+.hangman-draw .draw .the-stand {
+    height: 100%;
+    width: 4px;
+    background-color: #222;
+    margin: auto;
+}
+
+.hangman-draw .draw .the-hang::before,
+.hangman-draw .draw .the-hang::after {
+    content: "";
+    position: absolute;
+    background-color: #222;
+}
+
+.hangman-draw .draw .the-hang::before {
+    width: 100px;
+    height: 4px;
+    top: 20px;
+    left: 30px;
+}
+.hangman-draw .draw .the-hang::after {
+    width: 4px;
+    height: 30px;
+    top: 20px;
+    left: 126px;
+}
+
+.hangman-draw .draw .the-rope {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 4px dashed #222;
+    left: 95px;
+    top: 46px;
+}
+
+.hangman-draw .draw .head {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 4px solid #222;
+    left: 105px;
+    top: 56px;
 }
 
 .letters {
