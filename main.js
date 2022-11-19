@@ -63,9 +63,33 @@ const words = {
 // Get the keys of the object
 let keys = Object.keys(words);
 
-// Get a random value from the object
+// Get a random category from the object
 let randomNumber = Math.floor(Math.random() * keys.length);
 
 // Appending the category name in the page
 document.querySelector(".category span").innerHTML =
     keys[randomNumber].toUpperCase();
+
+// Get the random array of words
+let wordsArray = words[keys[randomNumber]];
+
+// Get the random index from the array of words
+let randomWordIndex = Math.floor(Math.random() * wordsArray.length);
+
+// Get the chosen word
+let chosenWord = wordsArray[randomWordIndex];
+
+// Get an array from the chosen word
+let chosenWordArray = Array.from(chosenWord);
+
+// Catch the guess-letter container
+let guessLetterContainer = document.querySelector(".guess-letter");
+chosenWordArray.forEach((letter) => {
+    let spans = document.createElement("span");
+
+    if (letter === " ") {
+        spans.className = "space";
+    }
+
+    guessLetterContainer.appendChild(spans);
+});
