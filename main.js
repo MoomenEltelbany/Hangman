@@ -21,6 +21,8 @@ lettersArray.forEach((letter) => {
     lettersContainer.appendChild(span);
 });
 
+let letterSpan = Array.from(document.querySelectorAll(".letter-box"));
+
 const words = {
     programming: [
         "php",
@@ -84,6 +86,8 @@ let chosenWordArray = Array.from(chosenWord);
 
 // Catch the guess-letter container
 let guessLetterContainer = document.querySelector(".guess-letter");
+
+// Create spans depending on the number of characters
 chosenWordArray.forEach((letter) => {
     let spans = document.createElement("span");
 
@@ -91,5 +95,48 @@ chosenWordArray.forEach((letter) => {
         spans.className = "space";
     }
 
+    // Appending the spans into our page
     guessLetterContainer.appendChild(spans);
+});
+
+// Set the wrong attempts
+let wrongAttempts = 0;
+
+// Capture the draw
+let theDraw = document.querySelector(".draw");
+
+document.addEventListener("click", (e) => {
+    let status = false;
+
+    // If the target has a class that is letter-box, we will add special class to make the pointer events none
+    if (e.target.className === "letter-box") {
+        e.target.classList.add("chosen");
+    }
+
+    // Get the chosen character by the user
+    let chosenLetter = e.target.innerHTML.toLowerCase();
+
+    // Looping on the chosen word
+    chosenWordArray.forEach((letter, index) => {
+        if (letter.toLowerCase() === chosenLetter) {
+            status = true;
+            // Getting all the spans that we created
+            let guessLetterSpans =
+                document.querySelectorAll(".guess-letter span");
+
+            // Making an array from all the spans that we created
+            let guessLetterSpansArray = Array.from(guessLetterSpans);
+
+            // Depending on the index of both the word and span, we can add the letter
+            guessLetterSpansArray.forEach((ele, i) => {
+                if (index === i) {
+                    ele.innerHTML = chosenLetter.toUpperCase();
+                }
+            });
+        }
+    });
+    if (status !== true) {
+        wrongAttempts++;
+        theDraw.classList.add(`wrong-${wrongAttempts}`);
+    }
 });
