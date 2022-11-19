@@ -20,3 +20,52 @@ lettersArray.forEach((letter) => {
     // Add the span to the container
     lettersContainer.appendChild(span);
 });
+
+const words = {
+    programming: [
+        "php",
+        "javascript",
+        "go",
+        "scala",
+        "fortran",
+        "mysql",
+        "python",
+    ],
+    movies: [
+        "Prestige",
+        "Inception",
+        "Parasite",
+        "Interstellar",
+        "I am legend",
+        "Memento",
+        "Coco",
+        "Up",
+    ],
+    people: [
+        "Albert Einstein",
+        "Hitchcock",
+        "Alexander",
+        "Cleopatra",
+        "Mahatma Ghandi",
+    ],
+    countries: ["Syria", "Palestine", "Yemen", "Egypt", "Bahrain", "Qatar"],
+    players: [
+        "Wayne Rooney",
+        "Lionel Messi",
+        "Zidane",
+        "Totti",
+        "Henry",
+        "Ronaldinho",
+        "Xavi",
+    ],
+};
+
+// Get the keys of the object
+let keys = Object.keys(words);
+
+// Get a random value from the object
+let randomNumber = Math.floor(Math.random() * keys.length);
+
+// Appending the category name in the page
+document.querySelector(".category span").innerHTML =
+    keys[randomNumber].toUpperCase();

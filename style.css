@@ -19,6 +19,11 @@ body {
     padding-bottom: 20px;
 }
 
+.game-info span {
+    color: #00bcd4;
+    font-weight: bold;
+}
+
 hr {
     border: 1px solid #222;
 }
@@ -166,4 +171,21 @@ hr {
 
 .letters span:hover {
     background-color: #019baf;
+}
+
+.guess-letter {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.guess-letter span {
+    min-height: 40px;
+    min-width: 50px;
+    font-size: 24px;
+    border-bottom: 4px solid #222;
+    text-align: center;
+    color: #00bcd4;
 }
