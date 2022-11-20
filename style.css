@@ -272,7 +272,8 @@ hr {
     left: 50%;
     transform: translateX(-50%);
     gap: 30px;
-    font-size: 45px;
+    font-size: 30px;
+    padding: 20px;
     text-transform: uppercase;
     color: white;
     display: none;
@@ -281,6 +282,10 @@ hr {
 .end p {
     width: fit-content;
     margin: 100px auto 0;
+}
+
+.end p span {
+    color: #222;
 }
 
 .end button {

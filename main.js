@@ -132,6 +132,10 @@ document.addEventListener("click", (e) => {
                 if (index === i) {
                     ele.innerHTML = chosenLetter.toUpperCase();
                 }
+
+                if (ele.innerHTML !== "") {
+                    document.querySelector(".row").classList.add("finished");
+                }
             });
         }
     });
@@ -150,6 +154,7 @@ document.addEventListener("click", (e) => {
 // Function to end the game upon use all the chances
 function endGame() {
     document.querySelector(".end").style.display = "block";
+    document.querySelector(".end-text").innerHTML = `${chosenWord}`;
     document.querySelector(".row").classList.add("finished");
 }
 
