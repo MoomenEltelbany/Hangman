@@ -132,10 +132,6 @@ document.addEventListener("click", (e) => {
                 if (index === i) {
                     ele.innerHTML = chosenLetter.toUpperCase();
                 }
-
-                if (ele.innerHTML !== "") {
-                    document.querySelector(".row").classList.add("finished");
-                }
             });
         }
     });
