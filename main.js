@@ -138,5 +138,18 @@ document.addEventListener("click", (e) => {
     if (status !== true) {
         wrongAttempts++;
         theDraw.classList.add(`wrong-${wrongAttempts}`);
+
+        if (wrongAttempts === 8) {
+            endGame();
+        }
     }
 });
+
+// Function to end the game upon use all the chances
+function endGame() {
+    document.querySelector(".end").style.display = "block";
+    document.querySelector(".row").classList.add("finished");
+}
+
+// Restart the game button
+document.getElementById("restart").onclick = () => window.location.reload();

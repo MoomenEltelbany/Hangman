@@ -13,6 +13,10 @@ body {
     margin: 20px auto;
 }
 
+.row.finished {
+    pointer-events: none;
+}
+
 .game-info {
     display: flex;
     justify-content: space-between;
@@ -256,4 +260,44 @@ hr {
     top: 50%;
     transform: translate(-50%, -50%);
     background-color: #222;
+}
+
+.end {
+    width: 600px;
+    height: 300px;
+    background-color: #93c0a4;
+    border-radius: 10px;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 30px;
+    font-size: 45px;
+    text-transform: uppercase;
+    color: white;
+    display: none;
+}
+
+.end p {
+    width: fit-content;
+    margin: 100px auto 0;
+}
+
+.end button {
+    width: fit-content;
+    margin: 20px auto;
+    display: block;
+    font-size: 18px;
+    padding: 10px 5px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #8e9b90;
+    color: white;
+    transition: 0.7s;
+}
+
+.end button:hover {
+    background-color: white;
+    color: black;
 }
