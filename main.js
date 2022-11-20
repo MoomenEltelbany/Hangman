@@ -135,7 +135,9 @@ document.addEventListener("click", (e) => {
             });
         }
     });
-    if (status !== true) {
+
+    // Added this condition  'e.target.classList.contains("chosen")' so that we don't add the wrong class on already chosen words
+    if (status !== true && e.target.classList.contains("chosen")) {
         wrongAttempts++;
         theDraw.classList.add(`wrong-${wrongAttempts}`);
 
