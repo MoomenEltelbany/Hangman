@@ -106,6 +106,22 @@ let wrongAttempts = 0;
 let theDraw = document.querySelector(".draw");
 
 document.addEventListener("click", (e) => {
+    let allSpansFull = false;
+
+    // Getting all the spans that we created
+    let guessLetterSpans = document.querySelectorAll(".guess-letter span");
+
+    // Making an array from all the spans that we created
+    let guessLetterSpansArray = Array.from(guessLetterSpans);
+
+    guessLetterSpansArray.forEach((span, index) => {
+        if (span.innerHTML !== "") {
+            document
+                .querySelector(".guess-letter")
+                .classList.add(`letter-${index}`);
+        }
+    });
+
     let status = false;
 
     // If the target has a class that is letter-box, we will add special class to make the pointer events none
@@ -120,12 +136,6 @@ document.addEventListener("click", (e) => {
     chosenWordArray.forEach((letter, index) => {
         if (letter.toLowerCase() === chosenLetter) {
             status = true;
-            // Getting all the spans that we created
-            let guessLetterSpans =
-                document.querySelectorAll(".guess-letter span");
-
-            // Making an array from all the spans that we created
-            let guessLetterSpansArray = Array.from(guessLetterSpans);
 
             // Depending on the index of both the word and span, we can add the letter
             guessLetterSpansArray.forEach((ele, i) => {
