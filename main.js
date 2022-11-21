@@ -106,20 +106,14 @@ let wrongAttempts = 0;
 let theDraw = document.querySelector(".draw");
 
 document.addEventListener("click", (e) => {
-    let allSpansFull = false;
-
     // Getting all the spans that we created
     let guessLetterSpans = document.querySelectorAll(".guess-letter span");
 
     // Making an array from all the spans that we created
     let guessLetterSpansArray = Array.from(guessLetterSpans);
 
-    guessLetterSpansArray.forEach((span, index) => {
-        if (span.innerHTML !== "") {
-            document
-                .querySelector(".guess-letter")
-                .classList.add(`letter-${index}`);
-        }
+    guessLetterSpansArray.every(function (e) {
+        return !e.innerHTML;
     });
 
     let status = false;
