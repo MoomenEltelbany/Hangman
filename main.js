@@ -164,6 +164,9 @@ function checkWin() {
     document.querySelector(".win-text").innerHTML = `Bravo! You cracked the code — the spotlight’s on you! 🎬`;
     document.querySelector(".row").classList.add("finished");
 
+    // Attach restart logic only when the win box is shown
+    document.getElementById("win-restart").onclick = () => window.location.reload();
+
     // Optional: hide after 5 seconds
     setTimeout(() => {
       winBox.style.display = "none";
