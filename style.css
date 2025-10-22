@@ -263,7 +263,7 @@ hr {
 }
 
 .win {
-display: block !important;
+  display: block !important;
   position: fixed;
   top: 50%;
   left: 50%;
