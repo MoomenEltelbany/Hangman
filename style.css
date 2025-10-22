@@ -322,7 +322,8 @@ hr {
     color: #222;
 }
 
-.end button {
+.end button,
+.win button{
     width: fit-content;
     margin: 20px auto;
     display: block;
@@ -336,7 +337,8 @@ hr {
     transition: 0.7s;
 }
 
-.end button:hover {
+.end button:hover,
+.win button:hover{
     background-color: white;
     color: black;
 }
