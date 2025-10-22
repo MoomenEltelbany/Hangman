@@ -220,12 +220,6 @@ function checkWin() {
       restartBtn.onclick = () => window.location.reload();
     }
 
-
-    // Optional: hide after 5 seconds
-    setTimeout(() => {
-      winBox.style.display = "none";
-    }, 5000);
-  }
 }
 
 // Function to end the game upon use all the chances
