@@ -135,6 +135,7 @@ document.addEventListener("click", (e) => {
             guessLetterSpansArray.forEach((ele, i) => {
                 if (index === i) {
                     ele.innerHTML = chosenLetter.toUpperCase();
+                    checkWin();
                 }
             });
         }
@@ -150,6 +151,19 @@ document.addEventListener("click", (e) => {
         }
     }
 });
+
+function checkWin() {
+  const guessSpans = document.querySelectorAll(".guess-letter span");
+  const allFilled = Array.from(guessSpans).every((span, i) => {
+    return span.classList.contains("space") || span.innerHTML !== "";
+  });
+
+  if (allFilled) {
+    document.querySelector(".win").style.display = "block";
+    document.querySelector(".win-text").innerHTML = `You solved it! 🎉 The word was: ${chosenWord}`;
+    document.querySelector(".row").classList.add("finished");
+  }
+}
 
 // Function to end the game upon use all the chances
 function endGame() {
