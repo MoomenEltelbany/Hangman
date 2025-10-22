@@ -165,7 +165,8 @@ function checkWin() {
     document.querySelector(".row").classList.add("finished");
 
     // Attach restart logic only when the win box is shown
-    document.getElementById("win-restart").onclick = () => window.location.reload();
+    // Restart the game button
+    document.getElementById("restart").onclick = () => window.location.reload();
 
     // Optional: hide after 5 seconds
     setTimeout(() => {
