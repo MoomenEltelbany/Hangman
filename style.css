@@ -296,6 +296,24 @@ hr {
   }
 }
 
+.restart-btn {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #ff3333;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.restart-btn:hover {
+  background-color: #cc0000;
+}
+
+
 
 .end {
     width: 600px;
