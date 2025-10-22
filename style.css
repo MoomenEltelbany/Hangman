@@ -262,6 +262,41 @@ hr {
     background-color: #222;
 }
 
+.win {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #1a1a1a;
+  color: #f1f1f3;
+  padding: 2rem 3rem;
+  border: 2px solid #ff3333;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 51, 51, 0.5);
+  z-index: 9999;
+  text-align: center;
+  animation: fadeInScale 0.5s ease-out forwards;
+}
+
+.win-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffcccc;
+}
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+
 .end {
     width: 600px;
     height: 300px;
