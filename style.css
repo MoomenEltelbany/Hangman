@@ -323,7 +323,7 @@ hr {
 }
 
 .end button,
-.win button{
+.win .win-restart{
     width: fit-content;
     margin: 20px auto;
     display: block;
@@ -338,7 +338,7 @@ hr {
 }
 
 .end button:hover,
-.win button:hover{
+.win .win-restart:hover{
     background-color: white;
     color: black;
 }
