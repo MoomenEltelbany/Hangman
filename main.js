@@ -154,14 +154,20 @@ document.addEventListener("click", (e) => {
 
 function checkWin() {
   const guessSpans = document.querySelectorAll(".guess-letter span");
-  const allFilled = Array.from(guessSpans).every((span, i) => {
+  const allFilled = Array.from(guessSpans).every((span) => {
     return span.classList.contains("space") || span.innerHTML !== "";
   });
 
   if (allFilled) {
-    document.querySelector(".win").style.display = "block";
-    document.querySelector(".win-text").innerHTML = `You solved it! 🎉 The word was: ${chosenWord}`;
+    const winBox = document.querySelector(".win");
+    winBox.style.display = "block";
+    document.querySelector(".win-text").innerHTML = `Bravo! You cracked the code — the spotlight’s on you! 🎬`;
     document.querySelector(".row").classList.add("finished");
+
+    // Optional: hide after 5 seconds
+    setTimeout(() => {
+      winBox.style.display = "none";
+    }, 5000);
   }
 }
 
